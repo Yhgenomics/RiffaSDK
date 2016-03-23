@@ -1,0 +1,110 @@
+PLL_Name	ALTPLL50I50O125O250O:ALTPLL50I50O125O250O_inst|altpll:altpll_component|ALTPLL50I50O125O250O_altpll:auto_generated|pll1
+PLLJITTER	26
+PLLSPEmax	40
+PLLSPEmin	-40
+
+PLL_Name	PCIE_REFCLK~input~INSERTED_REFCLK_DIVIDER
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	PCIeGen1x8If64:pcie_inst|PCIeGen1x8If64_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|stratix_iv.stratixiv_hssi_pcie_hip
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	PCIeGen1x8If64:pcie_inst|PCIeGen1x8If64_serdes:serdes|PCIeGen1x8If64_serdes_alt4gxb_qd9b:PCIeGen1x8If64_serdes_alt4gxb_qd9b_component|central_clk_div0
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	PCIeGen1x8If64:pcie_inst|PCIeGen1x8If64_serdes:serdes|PCIeGen1x8If64_serdes_alt4gxb_qd9b:PCIeGen1x8If64_serdes_alt4gxb_qd9b_component|central_clk_div1
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	PCIeGen1x8If64:pcie_inst|PCIeGen1x8If64_serdes:serdes|PCIeGen1x8If64_serdes_alt4gxb_qd9b:PCIeGen1x8If64_serdes_alt4gxb_qd9b_component|receive_pma0
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	PCIeGen1x8If64:pcie_inst|PCIeGen1x8If64_serdes:serdes|PCIeGen1x8If64_serdes_alt4gxb_qd9b:PCIeGen1x8If64_serdes_alt4gxb_qd9b_component|receive_pma1
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	PCIeGen1x8If64:pcie_inst|PCIeGen1x8If64_serdes:serdes|PCIeGen1x8If64_serdes_alt4gxb_qd9b:PCIeGen1x8If64_serdes_alt4gxb_qd9b_component|receive_pma2
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	PCIeGen1x8If64:pcie_inst|PCIeGen1x8If64_serdes:serdes|PCIeGen1x8If64_serdes_alt4gxb_qd9b:PCIeGen1x8If64_serdes_alt4gxb_qd9b_component|receive_pma3
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	PCIeGen1x8If64:pcie_inst|PCIeGen1x8If64_serdes:serdes|PCIeGen1x8If64_serdes_alt4gxb_qd9b:PCIeGen1x8If64_serdes_alt4gxb_qd9b_component|receive_pma4
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	PCIeGen1x8If64:pcie_inst|PCIeGen1x8If64_serdes:serdes|PCIeGen1x8If64_serdes_alt4gxb_qd9b:PCIeGen1x8If64_serdes_alt4gxb_qd9b_component|receive_pma5
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	PCIeGen1x8If64:pcie_inst|PCIeGen1x8If64_serdes:serdes|PCIeGen1x8If64_serdes_alt4gxb_qd9b:PCIeGen1x8If64_serdes_alt4gxb_qd9b_component|receive_pma6
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	PCIeGen1x8If64:pcie_inst|PCIeGen1x8If64_serdes:serdes|PCIeGen1x8If64_serdes_alt4gxb_qd9b:PCIeGen1x8If64_serdes_alt4gxb_qd9b_component|receive_pma7
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	PCIeGen1x8If64:pcie_inst|PCIeGen1x8If64_serdes:serdes|PCIeGen1x8If64_serdes_alt4gxb_qd9b:PCIeGen1x8If64_serdes_alt4gxb_qd9b_component|rx_cdr_pll0
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	PCIeGen1x8If64:pcie_inst|PCIeGen1x8If64_serdes:serdes|PCIeGen1x8If64_serdes_alt4gxb_qd9b:PCIeGen1x8If64_serdes_alt4gxb_qd9b_component|rx_cdr_pll1
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	PCIeGen1x8If64:pcie_inst|PCIeGen1x8If64_serdes:serdes|PCIeGen1x8If64_serdes_alt4gxb_qd9b:PCIeGen1x8If64_serdes_alt4gxb_qd9b_component|rx_cdr_pll2
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	PCIeGen1x8If64:pcie_inst|PCIeGen1x8If64_serdes:serdes|PCIeGen1x8If64_serdes_alt4gxb_qd9b:PCIeGen1x8If64_serdes_alt4gxb_qd9b_component|rx_cdr_pll3
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	PCIeGen1x8If64:pcie_inst|PCIeGen1x8If64_serdes:serdes|PCIeGen1x8If64_serdes_alt4gxb_qd9b:PCIeGen1x8If64_serdes_alt4gxb_qd9b_component|rx_cdr_pll4
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	PCIeGen1x8If64:pcie_inst|PCIeGen1x8If64_serdes:serdes|PCIeGen1x8If64_serdes_alt4gxb_qd9b:PCIeGen1x8If64_serdes_alt4gxb_qd9b_component|rx_cdr_pll5
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	PCIeGen1x8If64:pcie_inst|PCIeGen1x8If64_serdes:serdes|PCIeGen1x8If64_serdes_alt4gxb_qd9b:PCIeGen1x8If64_serdes_alt4gxb_qd9b_component|rx_cdr_pll6
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	PCIeGen1x8If64:pcie_inst|PCIeGen1x8If64_serdes:serdes|PCIeGen1x8If64_serdes_alt4gxb_qd9b:PCIeGen1x8If64_serdes_alt4gxb_qd9b_component|rx_cdr_pll7
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	PCIeGen1x8If64:pcie_inst|PCIeGen1x8If64_serdes:serdes|PCIeGen1x8If64_serdes_alt4gxb_qd9b:PCIeGen1x8If64_serdes_alt4gxb_qd9b_component|tx_pll0
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+

@@ -1,0 +1,1129 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+# Date created = 11:42:13  March 24, 2014
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		DE4Gen1x8If64_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Stratix IV"
+set_global_assignment -name DEVICE EP4SGX230KF40C2
+set_global_assignment -name TOP_LEVEL_ENTITY DE4Gen1x8If64
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:42:13  MARCH 24, 2014"
+set_global_assignment -name LAST_QUARTUS_VERSION 14.1.0
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+
+################################################################################
+# Oscillators & External Clocks
+################################################################################
+
+set_location_assignment PIN_AC35 -to OSC_50_BANK2
+set_instance_assignment -name IO_STANDARD "2.5 V" -to OSC_50_BANK2
+set_location_assignment PIN_AV22 -to OSC_50_BANK3
+set_instance_assignment -name IO_STANDARD "2.5 V" -to OSC_50_BANK3
+set_location_assignment PIN_AV19 -to OSC_50_BANK4
+set_instance_assignment -name IO_STANDARD "2.5 V" -to OSC_50_BANK4
+set_location_assignment PIN_AC6 -to OSC_50_BANK5
+set_instance_assignment -name IO_STANDARD "2.5 V" -to OSC_50_BANK5
+set_location_assignment PIN_AB6 -to OSC_50_BANK6
+set_instance_assignment -name IO_STANDARD "2.5 V" -to OSC_50_BANK6
+
+################################################################################
+# LED's
+################################################################################
+
+set_location_assignment PIN_V28 -to LED[0]
+set_location_assignment PIN_W28 -to LED[1]
+set_location_assignment PIN_R29 -to LED[2]
+set_location_assignment PIN_P29 -to LED[3]
+set_location_assignment PIN_N29 -to LED[4]
+set_location_assignment PIN_M29 -to LED[5]
+set_location_assignment PIN_M30 -to LED[6]
+set_location_assignment PIN_N30 -to LED[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LED[*]
+
+################################################################################
+# PCIE Connections
+################################################################################
+
+set_location_assignment PIN_AN38 -to PCIE_REFCLK
+set_instance_assignment -name IO_STANDARD HCSL -to PCIE_REFCLK
+set_instance_assignment -name INPUT_TERMINATION OFF -to PCIE_REFCLK
+
+set_location_assignment PIN_AN39 -to "PCIE_REFCLK(n)"
+
+set_location_assignment PIN_V30 -to PCIE_RESET_N
+set_instance_assignment -name IO_STANDARD "2.5 V" -to PCIE_RESET_N
+
+################################################################################
+#PCIE RX_IN 0
+################################################################################
+set_location_assignment PIN_AU38 -to PCIE_RX_IN[0]
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to PCIE_RX_IN[0]
+################################################################################
+#PCIE RX_IN 1
+################################################################################
+set_location_assignment PIN_AR38 -to PCIE_RX_IN[1]
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to PCIE_RX_IN[1]
+################################################################################
+#PCIE RX_IN 2
+################################################################################
+set_location_assignment PIN_AJ38 -to PCIE_RX_IN[2]
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to PCIE_RX_IN[2]
+################################################################################
+#PCIE RX_IN 3
+################################################################################
+set_location_assignment PIN_AG38 -to PCIE_RX_IN[3]
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to PCIE_RX_IN[3]
+################################################################################
+#PCIE RX_IN 4
+################################################################################
+set_location_assignment PIN_AE38 -to PCIE_RX_IN[4]
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to PCIE_RX_IN[4]
+################################################################################
+#PCIE RX_IN 5
+################################################################################
+set_location_assignment PIN_AC38 -to PCIE_RX_IN[5]
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to PCIE_RX_IN[5]
+################################################################################
+#PCIE RX_IN 6
+################################################################################
+set_location_assignment PIN_U38 -to PCIE_RX_IN[6]
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to PCIE_RX_IN[6]
+################################################################################
+#PCIE RX_IN 7
+################################################################################
+set_location_assignment PIN_R38 -to PCIE_RX_IN[7]
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to PCIE_RX_IN[7]
+################################################################################
+#PCIE TX_OUT 0
+################################################################################
+set_location_assignment PIN_AT36 -to PCIE_TX_OUT[0]
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to PCIE_TX_OUT[0]
+################################################################################
+#PCIE TX_OUT 1
+################################################################################
+set_location_assignment PIN_AP36 -to PCIE_TX_OUT[1]
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to PCIE_TX_OUT[1]
+################################################################################
+#PCIE TX_OUT 2
+################################################################################
+set_location_assignment PIN_AH36 -to PCIE_TX_OUT[2]
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to PCIE_TX_OUT[2]
+################################################################################
+#PCIE TX_OUT 3
+################################################################################
+set_location_assignment PIN_AF36 -to PCIE_TX_OUT[3]
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to PCIE_TX_OUT[3]
+################################################################################
+#PCIE TX_OUT 4
+################################################################################
+set_location_assignment PIN_AD36 -to PCIE_TX_OUT[4]
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to PCIE_TX_OUT[4]
+################################################################################
+#PCIE TX_OUT 5
+################################################################################
+set_location_assignment PIN_AB36 -to PCIE_TX_OUT[5]
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to PCIE_TX_OUT[5]
+################################################################################
+#PCIE TX_OUT 6
+################################################################################
+set_location_assignment PIN_T36 -to PCIE_TX_OUT[6]
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to PCIE_TX_OUT[6]
+################################################################################
+#PCIE TX_OUT 7
+################################################################################
+set_location_assignment PIN_P36 -to PCIE_TX_OUT[7]
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to PCIE_TX_OUT[7]
+
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_INPUT_VERSION SYSTEMVERILOG_2005
+set_global_assignment -name VERILOG_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+
+set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name USE_SIGNALTAP_FILE stp2.stp
+set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_BLOCK_TYPE=AUTO" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_INFO=805334528" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=1024" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ATTRIBUTE_MEM_MODE=OFF" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_USE_GENERATED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_BITS=11" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INCREMENTAL_ROUTING=1" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[3] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[11] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[14] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[31] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=1024" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[18] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[24] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[9] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[20] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[25] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_global_assignment -name VERILOG_FILE ../hdl/m_pcie_if_v2.v
+set_global_assignment -name VERILOG_FILE ../hdl/m_pcie_if.v
+set_global_assignment -name SDC_FILE ../constr/DE4Gen1x8If64.sdc
+set_global_assignment -name VERILOG_FILE ../hdl/DE4Gen1x8If64.v
+set_global_assignment -name VERILOG_FILE ../../riffa_wrapper_de4.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/txr_engine_ultrascale.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/txr_engine_classic.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/txc_engine_ultrascale.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/txc_engine_classic.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_port_writer.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_port_monitor_128.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_port_monitor_64.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_port_monitor_32.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_port_channel_gate_128.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_port_channel_gate_64.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_port_channel_gate_32.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_port_buffer_128.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_port_buffer_64.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_port_buffer_32.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_port_128.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_port_64.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_port_32.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_multiplexer_all.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_multiplexer_128.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_multiplexer_64.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_multiplexer_32.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_multiplexer.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_hdr_fifo.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_engine_ultrascale.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_engine_selector.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_engine_classic.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_engine.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_data_shift.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_data_pipeline.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_data_fifo.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/tx_alignment_pipeline.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/translation_xilinx.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/translation_altera.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/syncff.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/sync_fifo.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/shiftreg.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/sg_list_requester.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/sg_list_reader_128.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/sg_list_reader_64.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/sg_list_reader_32.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/scsdpram.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/rxr_engine_ultrascale.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/rxr_engine_classic.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/rxc_engine_ultrascale.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/rxc_engine_classic.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/rx_port_requester_mux.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/rx_port_reader.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/rx_port_channel_gate.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/rx_port_128.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/rx_port_64.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/rx_port_32.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/rx_engine_ultrascale.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/rx_engine_classic.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/rotate.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/riffa.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/reorder_queue_output.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/reorder_queue_input.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/reorder_queue.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/registers.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/register.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/recv_credit_flow_ctrl.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/ram_2clk_1w_1r.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/ram_1clk_1w_1r.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/pipeline.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/one_hot_mux.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/ohtb.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/offset_to_mask.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/offset_flag_to_one_hot.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/mux.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/interrupt_controller.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/interrupt.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/fifo_packer_128.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/fifo_packer_64.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/fifo_packer_32.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/fifo.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/ff.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/engine_layer.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/demux.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/cross_domain_signal.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/counter.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/chnl_tester.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/channel_128.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/channel_64.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/channel_32.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/channel.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/async_fifo_fwft.v
+set_global_assignment -name VERILOG_FILE ../../../../riffa_hdl/async_fifo.v
+set_global_assignment -name QIP_FILE ../ip/ALTGXPCIeGen1x8.qip
+set_global_assignment -name QIP_FILE ../ip/ALTPLL50I50O125O250O.qip
+set_global_assignment -name QIP_FILE ../ip/PCIeGen1x8If64.qip
+set_global_assignment -name QIP_FILE PCIeGen1x8If64.qip
+set_global_assignment -name QIP_FILE ALTPLL50I50O125O250O.qip
+set_global_assignment -name QIP_FILE ALTGXPCIeGen1x8.qip
+set_global_assignment -name QIP_FILE myfifo.qip
+set_global_assignment -name SIGNALTAP_FILE stp1.stp
+set_global_assignment -name SIGNALTAP_FILE stp2.stp
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to "m_pcie_if_v2:u_pcie_if|clk" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_ACK[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_CLK[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[4] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[5] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[6] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[7] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[8] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[9] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[10] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[11] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[12] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[13] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[14] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[15] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[16] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[17] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[18] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[19] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[20] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[21] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[22] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[23] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[24] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[25] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[26] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[27] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[28] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[29] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[30] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[31] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[32] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[36]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[33] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[37]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[34] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[38]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[35] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[39]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[36] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[37] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[40]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[38] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[41]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[39] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[42]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[40] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[43]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[41] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[44]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[42] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[45]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[43] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[46]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[44] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[47]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[45] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[48]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[46] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[49]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[47] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[48] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[50]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[49] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[51]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[50] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[52]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[51] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[53]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[52] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[54]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[53] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[55]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[54] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[56]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[55] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[57]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[56] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[58]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[57] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[59]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[58] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[59] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[60]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[60] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[61]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[61] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[62]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[62] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[63]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[63] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[64] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[65] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[66] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[67] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA_REN[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[68] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA_VALID[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[69] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LAST[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[70] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[71] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[72] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[73] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[74] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[75] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[76] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[77] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[78] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[79] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[80] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[81] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[82] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[83] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[84] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[85] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[86] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[87] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[88] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[89] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[90] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[91] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[92] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[93] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[94] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[95] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[96] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[97] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[98] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[99] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[100] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[101] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[102] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[103] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[104] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[105] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[106] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[107] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[108] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[109] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[110] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[111] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[112] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[113] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[114] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[115] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[116] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[117] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[118] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[119] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[120] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[121] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[122] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[123] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[124] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[125] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[126] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[127] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[128] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[129] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[130] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[131] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[132] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[133] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[134] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_ACK[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[135] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_CLK[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[136] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[137] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[138] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[139] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[140] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[141] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[142] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[143] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[144] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[145] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[146] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[147] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[148] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[149] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[150] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[151] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[152] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[153] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[154] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[155] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[156] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[157] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[158] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[159] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[160] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[161] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[162] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[163] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[164] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[165] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[36]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[166] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[37]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[167] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[38]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[168] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[39]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[169] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[170] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[40]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[171] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[41]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[172] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[42]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[173] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[43]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[174] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[44]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[175] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[45]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[176] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[46]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[177] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[47]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[178] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[48]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[179] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[49]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[180] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[181] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[50]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[182] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[51]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[183] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[52]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[184] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[53]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[185] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[54]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[186] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[55]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[187] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[56]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[188] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[57]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[189] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[58]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[190] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[59]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[191] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[192] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[60]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[193] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[61]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[194] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[62]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[195] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[63]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[196] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[197] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[198] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[199] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[200] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA_REN[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[201] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA_VALID[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[202] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LAST[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[203] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[204] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[205] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[206] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[207] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[208] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[209] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[210] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[211] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[212] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[213] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[214] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[215] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[216] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[217] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[218] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[219] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[220] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[221] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[222] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[223] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[224] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[225] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[226] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[227] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[228] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[229] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[230] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[231] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[232] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[233] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[234] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[235] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[236] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[237] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[238] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[239] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[240] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[241] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[242] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[243] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[244] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[245] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[246] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[247] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[248] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[249] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[250] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[251] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[252] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[253] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[254] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[255] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[256] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[257] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[258] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[259] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[260] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[261] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[262] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[263] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[264] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[265] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[266] -to "m_pcie_if_v2:u_pcie_if|e_state[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[267] -to "m_pcie_if_v2:u_pcie_if|e_state[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[268] -to "m_pcie_if_v2:u_pcie_if|e_state[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[269] -to "m_pcie_if_v2:u_pcie_if|e_state[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[270] -to "m_pcie_if_v2:u_pcie_if|e_state[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[271] -to "m_pcie_if_v2:u_pcie_if|e_state[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[272] -to "m_pcie_if_v2:u_pcie_if|e_state[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[273] -to "m_pcie_if_v2:u_pcie_if|e_state[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[274] -to "m_pcie_if_v2:u_pcie_if|fifo_data[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[275] -to "m_pcie_if_v2:u_pcie_if|fifo_data[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[276] -to "m_pcie_if_v2:u_pcie_if|fifo_data[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[277] -to "m_pcie_if_v2:u_pcie_if|fifo_data[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[278] -to "m_pcie_if_v2:u_pcie_if|fifo_data[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[279] -to "m_pcie_if_v2:u_pcie_if|fifo_data[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[280] -to "m_pcie_if_v2:u_pcie_if|fifo_data[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[281] -to "m_pcie_if_v2:u_pcie_if|fifo_data[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[282] -to "m_pcie_if_v2:u_pcie_if|fifo_data[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[283] -to "m_pcie_if_v2:u_pcie_if|fifo_data[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[284] -to "m_pcie_if_v2:u_pcie_if|fifo_data[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[285] -to "m_pcie_if_v2:u_pcie_if|fifo_data[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[286] -to "m_pcie_if_v2:u_pcie_if|fifo_data[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[287] -to "m_pcie_if_v2:u_pcie_if|fifo_data[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[288] -to "m_pcie_if_v2:u_pcie_if|fifo_data[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[289] -to "m_pcie_if_v2:u_pcie_if|fifo_data[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[290] -to "m_pcie_if_v2:u_pcie_if|fifo_data[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[291] -to "m_pcie_if_v2:u_pcie_if|fifo_data[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[292] -to "m_pcie_if_v2:u_pcie_if|fifo_data[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[293] -to "m_pcie_if_v2:u_pcie_if|fifo_data[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[294] -to "m_pcie_if_v2:u_pcie_if|fifo_data[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[295] -to "m_pcie_if_v2:u_pcie_if|fifo_data[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[296] -to "m_pcie_if_v2:u_pcie_if|fifo_data[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[297] -to "m_pcie_if_v2:u_pcie_if|fifo_data[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[298] -to "m_pcie_if_v2:u_pcie_if|fifo_data[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[299] -to "m_pcie_if_v2:u_pcie_if|fifo_data[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[300] -to "m_pcie_if_v2:u_pcie_if|fifo_data[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[301] -to "m_pcie_if_v2:u_pcie_if|fifo_data[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[302] -to "m_pcie_if_v2:u_pcie_if|fifo_data[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[303] -to "m_pcie_if_v2:u_pcie_if|fifo_data[36]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[304] -to "m_pcie_if_v2:u_pcie_if|fifo_data[37]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[305] -to "m_pcie_if_v2:u_pcie_if|fifo_data[38]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[306] -to "m_pcie_if_v2:u_pcie_if|fifo_data[39]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[307] -to "m_pcie_if_v2:u_pcie_if|fifo_data[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[308] -to "m_pcie_if_v2:u_pcie_if|fifo_data[40]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[309] -to "m_pcie_if_v2:u_pcie_if|fifo_data[41]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[310] -to "m_pcie_if_v2:u_pcie_if|fifo_data[42]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[311] -to "m_pcie_if_v2:u_pcie_if|fifo_data[43]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[312] -to "m_pcie_if_v2:u_pcie_if|fifo_data[44]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[313] -to "m_pcie_if_v2:u_pcie_if|fifo_data[45]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[314] -to "m_pcie_if_v2:u_pcie_if|fifo_data[46]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[315] -to "m_pcie_if_v2:u_pcie_if|fifo_data[47]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[316] -to "m_pcie_if_v2:u_pcie_if|fifo_data[48]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[317] -to "m_pcie_if_v2:u_pcie_if|fifo_data[49]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[318] -to "m_pcie_if_v2:u_pcie_if|fifo_data[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[319] -to "m_pcie_if_v2:u_pcie_if|fifo_data[50]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[320] -to "m_pcie_if_v2:u_pcie_if|fifo_data[51]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[321] -to "m_pcie_if_v2:u_pcie_if|fifo_data[52]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[322] -to "m_pcie_if_v2:u_pcie_if|fifo_data[53]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[323] -to "m_pcie_if_v2:u_pcie_if|fifo_data[54]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[324] -to "m_pcie_if_v2:u_pcie_if|fifo_data[55]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[325] -to "m_pcie_if_v2:u_pcie_if|fifo_data[56]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[326] -to "m_pcie_if_v2:u_pcie_if|fifo_data[57]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[327] -to "m_pcie_if_v2:u_pcie_if|fifo_data[58]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[328] -to "m_pcie_if_v2:u_pcie_if|fifo_data[59]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[329] -to "m_pcie_if_v2:u_pcie_if|fifo_data[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[330] -to "m_pcie_if_v2:u_pcie_if|fifo_data[60]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[331] -to "m_pcie_if_v2:u_pcie_if|fifo_data[61]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[332] -to "m_pcie_if_v2:u_pcie_if|fifo_data[62]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[333] -to "m_pcie_if_v2:u_pcie_if|fifo_data[63]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[334] -to "m_pcie_if_v2:u_pcie_if|fifo_data[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[335] -to "m_pcie_if_v2:u_pcie_if|fifo_data[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[336] -to "m_pcie_if_v2:u_pcie_if|fifo_data[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[337] -to "m_pcie_if_v2:u_pcie_if|fifo_data[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[338] -to "m_pcie_if_v2:u_pcie_if|fifo_rd" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[339] -to "m_pcie_if_v2:u_pcie_if|fifo_wr" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_ACK[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_CLK[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[8] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[9] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[10] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[11] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[12] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[13] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[14] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[15] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[16] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[17] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[18] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[19] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[20] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[21] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[22] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[23] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[24] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[25] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[26] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[27] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[28] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[29] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[30] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[31] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[32] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[36]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[33] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[37]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[34] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[38]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[35] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[39]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[36] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[37] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[40]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[38] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[41]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[39] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[42]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[40] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[43]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[41] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[44]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[42] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[45]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[43] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[46]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[44] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[47]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[45] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[48]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[46] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[49]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[47] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[48] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[50]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[49] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[51]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[50] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[52]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[51] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[53]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[52] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[54]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[53] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[55]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[54] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[56]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[55] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[57]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[56] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[58]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[57] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[59]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[58] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[59] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[60]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[60] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[61]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[61] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[62]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[62] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[63]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[63] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[64] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[65] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[66] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[67] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA_REN[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[68] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_DATA_VALID[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[69] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LAST[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[70] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[71] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[72] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[73] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[74] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[75] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[76] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[77] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[78] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[79] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[80] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[81] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[82] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[83] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[84] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[85] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[86] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[87] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[88] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[89] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[90] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[91] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[92] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[93] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[94] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[95] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[96] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[97] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[98] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[99] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[100] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[101] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_LEN[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[102] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[103] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[104] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[105] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[106] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[107] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[108] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[109] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[110] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[111] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[112] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[113] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[114] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[115] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[116] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[117] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[118] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[119] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[120] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[121] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[122] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[123] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[124] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[125] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[126] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[127] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[128] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[129] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[130] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[131] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[132] -to "m_pcie_if_v2:u_pcie_if|CHNL_RX_OFF[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[133] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[134] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_ACK[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[135] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_CLK[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[136] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[137] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[138] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[139] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[140] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[141] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[142] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[143] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[144] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[145] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[146] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[147] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[148] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[149] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[150] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[151] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[152] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[153] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[154] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[155] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[156] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[157] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[158] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[159] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[160] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[161] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[162] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[163] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[164] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[165] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[36]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[166] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[37]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[167] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[38]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[168] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[39]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[169] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[170] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[40]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[171] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[41]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[172] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[42]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[173] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[43]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[174] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[44]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[175] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[45]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[176] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[46]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[177] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[47]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[178] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[48]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[179] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[49]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[180] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[181] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[50]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[182] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[51]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[183] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[52]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[184] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[53]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[185] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[54]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[186] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[55]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[187] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[56]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[188] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[57]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[189] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[58]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[190] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[59]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[191] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[192] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[60]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[193] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[61]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[194] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[62]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[195] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[63]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[196] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[197] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[198] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[199] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[200] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA_REN[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[201] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_DATA_VALID[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[202] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LAST[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[203] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[204] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[205] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[206] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[207] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[208] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[209] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[210] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[211] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[212] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[213] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[214] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[215] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[216] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[217] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[218] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[219] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[220] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[221] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[222] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[223] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[224] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[225] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[226] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[227] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[228] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[229] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[230] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[231] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[232] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[233] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[234] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_LEN[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[235] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[236] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[237] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[238] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[239] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[240] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[241] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[242] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[243] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[244] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[245] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[246] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[247] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[248] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[249] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[250] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[251] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[252] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[253] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[254] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[255] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[256] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[257] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[258] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[259] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[260] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[261] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[262] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[263] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[264] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[265] -to "m_pcie_if_v2:u_pcie_if|CHNL_TX_OFF[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[266] -to "m_pcie_if_v2:u_pcie_if|e_state[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[267] -to "m_pcie_if_v2:u_pcie_if|e_state[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[268] -to "m_pcie_if_v2:u_pcie_if|e_state[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[269] -to "m_pcie_if_v2:u_pcie_if|e_state[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[270] -to "m_pcie_if_v2:u_pcie_if|e_state[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[271] -to "m_pcie_if_v2:u_pcie_if|e_state[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[272] -to "m_pcie_if_v2:u_pcie_if|e_state[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[273] -to "m_pcie_if_v2:u_pcie_if|e_state[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[274] -to "m_pcie_if_v2:u_pcie_if|fifo_data[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[275] -to "m_pcie_if_v2:u_pcie_if|fifo_data[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[276] -to "m_pcie_if_v2:u_pcie_if|fifo_data[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[277] -to "m_pcie_if_v2:u_pcie_if|fifo_data[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[278] -to "m_pcie_if_v2:u_pcie_if|fifo_data[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[279] -to "m_pcie_if_v2:u_pcie_if|fifo_data[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[280] -to "m_pcie_if_v2:u_pcie_if|fifo_data[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[281] -to "m_pcie_if_v2:u_pcie_if|fifo_data[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[282] -to "m_pcie_if_v2:u_pcie_if|fifo_data[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[283] -to "m_pcie_if_v2:u_pcie_if|fifo_data[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[284] -to "m_pcie_if_v2:u_pcie_if|fifo_data[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[285] -to "m_pcie_if_v2:u_pcie_if|fifo_data[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[286] -to "m_pcie_if_v2:u_pcie_if|fifo_data[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[287] -to "m_pcie_if_v2:u_pcie_if|fifo_data[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[288] -to "m_pcie_if_v2:u_pcie_if|fifo_data[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[289] -to "m_pcie_if_v2:u_pcie_if|fifo_data[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[290] -to "m_pcie_if_v2:u_pcie_if|fifo_data[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[291] -to "m_pcie_if_v2:u_pcie_if|fifo_data[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[292] -to "m_pcie_if_v2:u_pcie_if|fifo_data[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[293] -to "m_pcie_if_v2:u_pcie_if|fifo_data[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[294] -to "m_pcie_if_v2:u_pcie_if|fifo_data[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[295] -to "m_pcie_if_v2:u_pcie_if|fifo_data[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[296] -to "m_pcie_if_v2:u_pcie_if|fifo_data[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[297] -to "m_pcie_if_v2:u_pcie_if|fifo_data[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[298] -to "m_pcie_if_v2:u_pcie_if|fifo_data[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[299] -to "m_pcie_if_v2:u_pcie_if|fifo_data[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[300] -to "m_pcie_if_v2:u_pcie_if|fifo_data[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[301] -to "m_pcie_if_v2:u_pcie_if|fifo_data[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[302] -to "m_pcie_if_v2:u_pcie_if|fifo_data[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[303] -to "m_pcie_if_v2:u_pcie_if|fifo_data[36]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[304] -to "m_pcie_if_v2:u_pcie_if|fifo_data[37]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[305] -to "m_pcie_if_v2:u_pcie_if|fifo_data[38]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[306] -to "m_pcie_if_v2:u_pcie_if|fifo_data[39]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[307] -to "m_pcie_if_v2:u_pcie_if|fifo_data[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[308] -to "m_pcie_if_v2:u_pcie_if|fifo_data[40]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[309] -to "m_pcie_if_v2:u_pcie_if|fifo_data[41]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[310] -to "m_pcie_if_v2:u_pcie_if|fifo_data[42]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[311] -to "m_pcie_if_v2:u_pcie_if|fifo_data[43]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[312] -to "m_pcie_if_v2:u_pcie_if|fifo_data[44]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[313] -to "m_pcie_if_v2:u_pcie_if|fifo_data[45]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[314] -to "m_pcie_if_v2:u_pcie_if|fifo_data[46]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[315] -to "m_pcie_if_v2:u_pcie_if|fifo_data[47]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[316] -to "m_pcie_if_v2:u_pcie_if|fifo_data[48]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[317] -to "m_pcie_if_v2:u_pcie_if|fifo_data[49]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[318] -to "m_pcie_if_v2:u_pcie_if|fifo_data[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[319] -to "m_pcie_if_v2:u_pcie_if|fifo_data[50]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[320] -to "m_pcie_if_v2:u_pcie_if|fifo_data[51]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[321] -to "m_pcie_if_v2:u_pcie_if|fifo_data[52]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[322] -to "m_pcie_if_v2:u_pcie_if|fifo_data[53]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[323] -to "m_pcie_if_v2:u_pcie_if|fifo_data[54]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[324] -to "m_pcie_if_v2:u_pcie_if|fifo_data[55]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[325] -to "m_pcie_if_v2:u_pcie_if|fifo_data[56]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[326] -to "m_pcie_if_v2:u_pcie_if|fifo_data[57]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[327] -to "m_pcie_if_v2:u_pcie_if|fifo_data[58]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[328] -to "m_pcie_if_v2:u_pcie_if|fifo_data[59]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[329] -to "m_pcie_if_v2:u_pcie_if|fifo_data[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[330] -to "m_pcie_if_v2:u_pcie_if|fifo_data[60]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[331] -to "m_pcie_if_v2:u_pcie_if|fifo_data[61]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[332] -to "m_pcie_if_v2:u_pcie_if|fifo_data[62]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[333] -to "m_pcie_if_v2:u_pcie_if|fifo_data[63]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[334] -to "m_pcie_if_v2:u_pcie_if|fifo_data[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[335] -to "m_pcie_if_v2:u_pcie_if|fifo_data[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[336] -to "m_pcie_if_v2:u_pcie_if|fifo_data[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[337] -to "m_pcie_if_v2:u_pcie_if|fifo_data[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[338] -to "m_pcie_if_v2:u_pcie_if|fifo_rd" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[339] -to "m_pcie_if_v2:u_pcie_if|fifo_wr" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[2] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[6] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[8] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[10] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[19] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[340] -to "m_pcie_if_v2:u_pcie_if|myfifo:u_fifo|aclr" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[341] -to "m_pcie_if_v2:u_pcie_if|myfifo:u_fifo|empty" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[342] -to "m_pcie_if_v2:u_pcie_if|myfifo:u_fifo|full" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[343] -to "m_pcie_if_v2:u_pcie_if|myfifo:u_fifo|rdreq" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[344] -to "m_pcie_if_v2:u_pcie_if|myfifo:u_fifo|wrreq" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[345] -to "m_pcie_if_v2:u_pcie_if|r_state[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[346] -to "m_pcie_if_v2:u_pcie_if|r_state[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[347] -to "m_pcie_if_v2:u_pcie_if|r_state[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[348] -to "m_pcie_if_v2:u_pcie_if|r_state[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[349] -to "m_pcie_if_v2:u_pcie_if|r_state[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[350] -to "m_pcie_if_v2:u_pcie_if|r_state[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[351] -to "m_pcie_if_v2:u_pcie_if|r_state[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[352] -to "m_pcie_if_v2:u_pcie_if|r_state[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[353] -to "m_pcie_if_v2:u_pcie_if|rst_n" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[354] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[355] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[356] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[357] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[358] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[359] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[360] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[361] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[362] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[363] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[364] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[365] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[366] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[367] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[368] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[369] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[9]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[370] -to "m_pcie_if_v2:u_pcie_if|ex_state_c.DDR_TRANS" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[371] -to "m_pcie_if_v2:u_pcie_if|ex_state_c.DECODE" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[372] -to "m_pcie_if_v2:u_pcie_if|ex_state_c.FETCH" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[373] -to "m_pcie_if_v2:u_pcie_if|ex_state_c.IDLE" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[374] -to "m_pcie_if_v2:u_pcie_if|ex_state_c.READ_REG" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[375] -to "m_pcie_if_v2:u_pcie_if|ex_state_c.TX_VALID" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[376] -to "m_pcie_if_v2:u_pcie_if|ex_state_c.WAIT_END" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[377] -to "m_pcie_if_v2:u_pcie_if|ex_state_c.WRITE_REG" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[378] -to "m_pcie_if_v2:u_pcie_if|ex_state_c~20" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[379] -to "m_pcie_if_v2:u_pcie_if|ex_state_c~21" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[380] -to "m_pcie_if_v2:u_pcie_if|ex_state_c~22" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[381] -to "m_pcie_if_v2:u_pcie_if|ex_state_c~23" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[382] -to "m_pcie_if_v2:u_pcie_if|riffa_state_c.ACK_RESP" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[383] -to "m_pcie_if_v2:u_pcie_if|riffa_state_c.CHK_LOC" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[384] -to "m_pcie_if_v2:u_pcie_if|riffa_state_c.HOLD" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[385] -to "m_pcie_if_v2:u_pcie_if|riffa_state_c.IDLE" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[386] -to "m_pcie_if_v2:u_pcie_if|riffa_state_c.IDLE~0" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[387] -to "m_pcie_if_v2:u_pcie_if|riffa_state_c.RECV" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[388] -to "m_pcie_if_v2:u_pcie_if|riffa_state_c.WAIT_END" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[389] -to "m_pcie_if_v2:u_pcie_if|riffa_state_c.WAIT_NEXT" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[390] -to "m_pcie_if_v2:u_pcie_if|riffa_state_c~19" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[391] -to "m_pcie_if_v2:u_pcie_if|riffa_state_c~20" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[340] -to "m_pcie_if_v2:u_pcie_if|myfifo:u_fifo|aclr" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[341] -to "m_pcie_if_v2:u_pcie_if|myfifo:u_fifo|empty" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[342] -to "m_pcie_if_v2:u_pcie_if|myfifo:u_fifo|full" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[343] -to "m_pcie_if_v2:u_pcie_if|myfifo:u_fifo|rdreq" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[344] -to "m_pcie_if_v2:u_pcie_if|myfifo:u_fifo|wrreq" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[345] -to "m_pcie_if_v2:u_pcie_if|r_state[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[346] -to "m_pcie_if_v2:u_pcie_if|r_state[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[347] -to "m_pcie_if_v2:u_pcie_if|r_state[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[348] -to "m_pcie_if_v2:u_pcie_if|r_state[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[349] -to "m_pcie_if_v2:u_pcie_if|r_state[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[350] -to "m_pcie_if_v2:u_pcie_if|r_state[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[351] -to "m_pcie_if_v2:u_pcie_if|r_state[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[352] -to "m_pcie_if_v2:u_pcie_if|r_state[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[353] -to "m_pcie_if_v2:u_pcie_if|rst_n" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[354] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[355] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[356] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[357] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[358] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[359] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[360] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[361] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[362] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[363] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[364] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[365] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[366] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[367] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[368] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[369] -to "m_pcie_if_v2:u_pcie_if|rx_cnt[9]" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[370] -to "m_pcie_if_v2:u_pcie_if|ex_state_c.DDR_TRANS" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[371] -to "m_pcie_if_v2:u_pcie_if|ex_state_c.DECODE" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[372] -to "m_pcie_if_v2:u_pcie_if|ex_state_c.FETCH" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[373] -to "m_pcie_if_v2:u_pcie_if|ex_state_c.IDLE" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[374] -to "m_pcie_if_v2:u_pcie_if|ex_state_c.READ_REG" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[375] -to "m_pcie_if_v2:u_pcie_if|ex_state_c.TX_VALID" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[376] -to "m_pcie_if_v2:u_pcie_if|ex_state_c.WAIT_END" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[377] -to "m_pcie_if_v2:u_pcie_if|ex_state_c.WRITE_REG" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[378] -to "m_pcie_if_v2:u_pcie_if|ex_state_c~20" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[379] -to "m_pcie_if_v2:u_pcie_if|ex_state_c~21" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[380] -to "m_pcie_if_v2:u_pcie_if|ex_state_c~22" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[381] -to "m_pcie_if_v2:u_pcie_if|ex_state_c~23" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[382] -to "m_pcie_if_v2:u_pcie_if|riffa_state_c.ACK_RESP" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[383] -to "m_pcie_if_v2:u_pcie_if|riffa_state_c.CHK_LOC" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[384] -to "m_pcie_if_v2:u_pcie_if|riffa_state_c.HOLD" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[385] -to "m_pcie_if_v2:u_pcie_if|riffa_state_c.IDLE" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[386] -to "m_pcie_if_v2:u_pcie_if|riffa_state_c.IDLE~0" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[387] -to "m_pcie_if_v2:u_pcie_if|riffa_state_c.RECV" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[388] -to "m_pcie_if_v2:u_pcie_if|riffa_state_c.WAIT_END" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[389] -to "m_pcie_if_v2:u_pcie_if|riffa_state_c.WAIT_NEXT" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[390] -to "m_pcie_if_v2:u_pcie_if|riffa_state_c~19" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[391] -to "m_pcie_if_v2:u_pcie_if|riffa_state_c~20" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=392" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=392" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_BITS=392" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=1200" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[0] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[1] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[4] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[5] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[7] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[12] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[13] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[15] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[16] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[17] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[21] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[22] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[23] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[26] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[27] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[28] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[29] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[30] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SLD_FILE db/stp2_auto_stripped.stp

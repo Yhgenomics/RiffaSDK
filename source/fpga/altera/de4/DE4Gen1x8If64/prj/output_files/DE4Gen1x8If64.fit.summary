@@ -1,0 +1,22 @@
+Fitter Status : Successful - Sun Dec 13 23:07:27 2015
+Quartus II 64-Bit Version : 14.1.0 Build 186 12/03/2014 SJ Full Version
+Revision Name : DE4Gen1x8If64
+Top-level Entity Name : DE4Gen1x8If64
+Family : Stratix IV
+Device : EP4SGX230KF40C2
+Timing Models : Final
+Logic utilization : 9 %
+    Combinational ALUTs : 8,811 / 182,400 ( 5 % )
+    Memory ALUTs : 23 / 91,200 ( < 1 % )
+    Dedicated logic registers : 15,317 / 182,400 ( 8 % )
+Total registers : 15317
+Total pins : 48 / 888 ( 5 % )
+Total virtual pins : 0
+Total block memory bits : 1,409,540 / 14,625,792 ( 10 % )
+DSP block 18-bit elements : 0 / 1,288 ( 0 % )
+Total GXB Receiver Channel PCS : 8 / 24 ( 33 % )
+Total GXB Receiver Channel PMA : 8 / 36 ( 22 % )
+Total GXB Transmitter Channel PCS : 8 / 24 ( 33 % )
+Total GXB Transmitter Channel PMA : 8 / 36 ( 22 % )
+Total PLLs : 1 / 8 ( 13 % )
+Total DLLs : 0 / 4 ( 0 % )

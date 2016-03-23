@@ -1,0 +1,20 @@
+Analysis & Synthesis Status : Successful - Sun Dec 13 23:02:23 2015
+Quartus II 64-Bit Version : 14.1.0 Build 186 12/03/2014 SJ Full Version
+Revision Name : DE4Gen1x8If64
+Top-level Entity Name : DE4Gen1x8If64
+Family : Stratix IV
+Logic utilization : N/A
+    Combinational ALUTs : 8,708
+    Memory ALUTs : 0
+    Dedicated logic registers : 15,780
+Total registers : 15780
+Total pins : 31
+Total virtual pins : 0
+Total block memory bits : 1,409,617
+DSP block 18-bit elements : 0
+Total GXB Receiver Channel PCS : 8
+Total GXB Receiver Channel PMA : 8
+Total GXB Transmitter Channel PCS : 8
+Total GXB Transmitter Channel PMA : 8
+Total PLLs : 1
+Total DLLs : 0

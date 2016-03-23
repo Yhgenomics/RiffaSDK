@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at m_pcie_if.v(180): always construct contains both blocking and non-blocking assignments
